@@ -1,16 +1,16 @@
 <template>
   <UContainer>
-    <!-- <UNavigationMenu :items="pages" class="w-full justify-center" /> -->
-     {{ useRouter().getRoutes().map((route) => route.name) }}
+    <UNavigationMenu class="w-full justify-center" :items="items" />
   </UContainer>
 </template>
 
 <script setup lang="ts">
 const items = ref([
   {
-    label: 'Guide',
-    icon: 'i-lucide-book-open',
-    to: '/getting-started',
+    label: 'Home',
+    icon: 'i-line-md:home-simple-twotone',
+    to: '/',
+    class: 'text-lg px-4',
     children: [
       {
         label: 'Introduction',
@@ -40,9 +40,10 @@ const items = ref([
     ]
   },
   {
-    label: 'Composables',
-    icon: 'i-lucide-database',
-    to: '/composables',
+    label: 'Menu',
+    icon: 'i-hugeicons:menu-restaurant',
+    to: '/menu',
+    class: 'text-lg px-4',
     children: [
       {
         label: 'defineShortcuts',
@@ -71,10 +72,10 @@ const items = ref([
     ]
   },
   {
-    label: 'Components',
-    icon: 'i-lucide-box',
-    to: '/components',
-    active: true,
+    label: 'Info',
+    icon: 'i-ph:info-duotone',
+    to: '/info',
+    class: 'text-lg px-4',
     children: [
       {
         label: 'Link',
@@ -115,16 +116,92 @@ const items = ref([
     ]
   },
   {
-    label: 'GitHub',
-    icon: 'i-simple-icons-github',
-    badge: '3.8k',
-    to: 'https://github.com/nuxt/ui',
-    target: '_blank'
+    label: 'Contact',
+    icon: 'i-mdi:contact',
+    to: '/contact',
+    class: 'text-lg px-4',
+    children: [
+      {
+        label: 'Link',
+        icon: 'i-lucide-file-text',
+        description: 'Use NuxtLink with superpowers.',
+        to: '/components/link'
+      },
+      {
+        label: 'Modal',
+        icon: 'i-lucide-file-text',
+        description: 'Display a modal within your application.',
+        to: '/components/modal'
+      },
+      {
+        label: 'NavigationMenu',
+        icon: 'i-lucide-file-text',
+        description: 'Display a list of links.',
+        to: '/components/navigation-menu'
+      },
+      {
+        label: 'Pagination',
+        icon: 'i-lucide-file-text',
+        description: 'Display a list of pages.',
+        to: '/components/pagination'
+      },
+      {
+        label: 'Popover',
+        icon: 'i-lucide-file-text',
+        description: 'Display a non-modal dialog that floats around a trigger element.',
+        to: '/components/popover'
+      },
+      {
+        label: 'Progress',
+        icon: 'i-lucide-file-text',
+        description: 'Show a horizontal bar to indicate task progression.',
+        to: '/components/progress'
+      }
+    ]
   },
   {
-    label: 'Help',
-    icon: 'i-lucide-circle-help',
-    disabled: true
+    label: 'Parmigiano@Casa',
+    icon: 'i-tdesign:cheese',
+    to: '/parmigiano',
+    class: 'text-lg px-4',
+    children: [
+      {
+        label: 'Link',
+        icon: 'i-lucide-file-text',
+        description: 'Use NuxtLink with superpowers.',
+        to: '/components/link'
+      },
+      {
+        label: 'Modal',
+        icon: 'i-lucide-file-text',
+        description: 'Display a modal within your application.',
+        to: '/components/modal'
+      },
+      {
+        label: 'NavigationMenu',
+        icon: 'i-lucide-file-text',
+        description: 'Display a list of links.',
+        to: '/components/navigation-menu'
+      },
+      {
+        label: 'Pagination',
+        icon: 'i-lucide-file-text',
+        description: 'Display a list of pages.',
+        to: '/components/pagination'
+      },
+      {
+        label: 'Popover',
+        icon: 'i-lucide-file-text',
+        description: 'Display a non-modal dialog that floats around a trigger element.',
+        to: '/components/popover'
+      },
+      {
+        label: 'Progress',
+        icon: 'i-lucide-file-text',
+        description: 'Show a horizontal bar to indicate task progression.',
+        to: '/components/progress'
+      }
+    ]
   }
 ])
 </script>
