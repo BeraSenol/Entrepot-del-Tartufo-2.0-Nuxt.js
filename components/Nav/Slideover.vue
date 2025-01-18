@@ -1,6 +1,6 @@
 <template>
   <USlideover v-model:open="isOpen" class="max-h-screen" close-icon="i-lucide-arrow-right">
-    <UButton class="py-1 md:scale-110 lg:scale-125 xl:scale-150" icon="i-heroicons-outline:menu" variant="subtle" />
+    <UButton class="py-1 md:scale-110 lg:scale-125 xl:scale-150" icon="i-heroicons-outline:menu" variant="soft" />
 
     <template #header>
       <div class="flex justify-between py-0">

@@ -1,7 +1,9 @@
 <template>
     <div class="flex flex-col justify-center items-center">
-        <Landing />
+        <LandingImage />
         <HomeWelcome />
-        <HomeLunch/>
+        <HomeLunchImage/>
+        <HomeWelcome />
+        <HomeParmigianoImage/>
     </div>
 </template>
