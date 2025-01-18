@@ -13,14 +13,15 @@ export default defineNuxtConfig({
     locales: [
       {
         code: 'en',
-        file: 'en.ts'
+        file: 'en.ts',
+        name: 'english'
       },
       {
         code: 'nl',
-        file: 'nl.ts'
+        file: 'nl.ts',
+        name: 'nederlands'
       }
     ],
-    lazy: true,
     defaultLocale: 'en'
   }
 })

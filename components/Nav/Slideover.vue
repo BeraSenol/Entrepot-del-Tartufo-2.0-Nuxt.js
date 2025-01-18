@@ -1,37 +1,49 @@
 <template>
-  <USlideover class="max-h-screen">
-    <UButton class="text-white" icon="i-heroicons-outline:menu" variant="ghost"/>
+  <USlideover v-model:open="isOpen" class="max-h-screen" close-icon="i-lucide-arrow-right">
+    <UButton class="md:scale-110 lg:scale-125 xl:scale-150" icon="i-heroicons-outline:menu" variant="ghost" />
+
     <template #header>
-      <UButton class="text-2xl font-extrabold uppercase tracking-wider text-white my-1" label="entrepot del
-        tartufo" variant="ghost" />
+      <div class="flex justify-between">
+        <UButton class="text-white text-xl pr-0 md:text-2xl font-extrabold uppercase tracking-wide" label="entrepot del
+        tartufo" to="/" variant="link" />
+        <UButton class="text-white px-1 md:scale-110 lg:scale-125" icon="i-material-symbols:close-rounded"
+          variant="link" @click="close()" />
+      </div>
     </template>
+
     <template #body>
       <div class="flex flex-col">
         <UButton v-for="route in routes" :key="route.label" :label="route.label" :to="route.to"
-          class="text-xl font-semibold uppercase tracking-wide text-white my-1" variant="link" />
+          class="text-white text-base md:text-lg xl:text-xl  font-extrabold uppercase" variant="link" @click="close()" />
       </div>
     </template>
+
     <template #footer>
       <div class="flex justify-center w-full">
         <UButton v-for="social in socials" :key="social.label" :icon="social.icon" :to="social.to"
-          class="text-2xl mx-2 font-extrabold uppercase tracking-wide text-white" variant="link" size="xl" />
+          class="text-white mx-1" variant="ghost" size="xl" target="_blank" />
       </div>
     </template>
+
   </USlideover>
 </template>
 
 <script lang="ts" setup>
+const isOpen = ref(false);
+const close = () => isOpen.value = !isOpen.value;
+
 const routes = ref([
-  { label: 'home', to: '/', icon: 'i-line-md:home-simple-twotone' },
-  { label: 'menu', to: '/menu', icon: 'i-hugeicons:menu-restaurant' },
-  { label: 'info', to: '/info', icon: 'i-ph:info-duotone' },
-  { label: 'contact', to: '/contact', icon: 'i-mdi:contact' },
-  { label: 'parmigiano@casa', to: '/parmigiano', icon: 'i-tdesign:cheese' }
+  { label: 'home', to: '/' },
+  { label: 'menu', to: '/menu' },
+  { label: 'info', to: '/info' },
+  { label: 'contact', to: '/contact' },
+  { label: 'parmigiano@casa', to: '/parmigiano' }
 ])
 
 const socials = ref([
-  { label: 'facebook', to: '', icon: 'i-uil:facebook' },
-  { label: 'instagram', to: '', icon: 'i-akar-icons:instagram-fill' },
+  { label: 'facebook', to: 'https://www.facebook.com/entrepotdeltartufo/', icon: 'i-uil:facebook' },
+  { label: 'instagram', to: 'https://www.instagram.com/entrepotdeltartufo/', icon: 'i-akar-icons:instagram-fill' },
+  { label: 'linked in', to: 'https://www.linkedin.com/company/entrepot-del-tartufo', icon: 'i-uil:linkedin' }
 ])
 </script>
 

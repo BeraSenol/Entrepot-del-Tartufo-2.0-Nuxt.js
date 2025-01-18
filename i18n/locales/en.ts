@@ -1,6 +1,8 @@
 export default defineI18nLocale(async locale => {
   return {
-    
-    welcome: 'Welcome'
+    index: {
+      title: 'welcome in restaurant entrepot del tartufo',
+      subtitle: 'italian food with a touch of truffle'
+    }
   }
 })
