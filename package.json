@@ -8,7 +8,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "upgrade":"npx nuxi upgrade"
+    "upgrade": "npx nuxi upgrade"
   },
   "dependencies": {
     "@nuxt/eslint": "0.7.5",
@@ -25,6 +25,7 @@
   "devDependencies": {
     "@iconify/tailwind": "^1.2.0",
     "@nuxtjs/i18n": "^9.1.1",
+    "autoprefixer": "^10.4.20",
     "typescript": "^5.7.3"
   }
 }

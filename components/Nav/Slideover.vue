@@ -1,9 +1,9 @@
 <template>
   <USlideover v-model:open="isOpen" class="max-h-screen" close-icon="i-lucide-arrow-right">
-    <UButton class="md:scale-110 lg:scale-125 xl:scale-150" icon="i-heroicons-outline:menu" variant="ghost" />
+    <UButton class="py-1 md:scale-110 lg:scale-125 xl:scale-150" icon="i-heroicons-outline:menu" variant="subtle" />
 
     <template #header>
-      <div class="flex justify-between">
+      <div class="flex justify-between py-0">
         <UButton class="text-white text-xl pr-0 md:text-2xl font-extrabold uppercase tracking-wide" label="entrepot del
         tartufo" to="/" variant="link" />
         <UButton class="text-white px-1 md:scale-110 lg:scale-125" icon="i-material-symbols:close-rounded"
@@ -14,7 +14,7 @@
     <template #body>
       <div class="flex flex-col">
         <UButton v-for="route in routes" :key="route.label" :label="route.label" :to="route.to"
-          class="text-white text-base md:text-lg xl:text-xl  font-extrabold uppercase" variant="link" @click="close()" />
+          class="text-white text-base md:text-lg xl:text-xl font-extrabold uppercase" variant="link" @click="close()" />
       </div>
     </template>
 
@@ -46,5 +46,3 @@ const socials = ref([
   { label: 'linked in', to: 'https://www.linkedin.com/company/entrepot-del-tartufo', icon: 'i-uil:linkedin' }
 ])
 </script>
-
-<style></style>

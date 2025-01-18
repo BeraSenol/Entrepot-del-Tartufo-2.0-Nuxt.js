@@ -1,9 +1,7 @@
 <template>
- <div>
-  <Landing/>
- </div>
+    <div class="flex flex-col justify-center items-center">
+        <Landing />
+        <HomeWelcome />
+        <HomeLunch/>
+    </div>
 </template>
-
-<script lang="ts" setup>
-
-</script>
