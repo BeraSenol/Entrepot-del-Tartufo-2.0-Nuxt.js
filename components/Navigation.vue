@@ -1,16 +1,15 @@
 <template>
-  <UContainer>
-    <UNavigationMenu class="w-full justify-center" :items="items" />
-  </UContainer>
+  <UNavigationMenu class="w-screen justify-center backdrop-blur-xl z-50" :items="items" highlight />
 </template>
 
 <script setup lang="ts">
+
 const items = ref([
   {
-    label: 'Home',
+    label: 'home',
     icon: 'i-line-md:home-simple-twotone',
     to: '/',
-    class: 'text-lg px-4',
+    class: 'text-md uppercase font-extrabold',
     children: [
       {
         label: 'Introduction',
@@ -40,10 +39,10 @@ const items = ref([
     ]
   },
   {
-    label: 'Menu',
+    label: 'menu',
     icon: 'i-hugeicons:menu-restaurant',
     to: '/menu',
-    class: 'text-lg px-4',
+    class: 'text-md uppercase font-extrabold',
     children: [
       {
         label: 'defineShortcuts',
@@ -72,10 +71,10 @@ const items = ref([
     ]
   },
   {
-    label: 'Info',
+    label: 'info',
     icon: 'i-ph:info-duotone',
     to: '/info',
-    class: 'text-lg px-4',
+    class: 'text-md uppercase font-extrabold',
     children: [
       {
         label: 'Link',
@@ -116,10 +115,10 @@ const items = ref([
     ]
   },
   {
-    label: 'Contact',
+    label: 'contact',
     icon: 'i-mdi:contact',
     to: '/contact',
-    class: 'text-lg px-4',
+    class: 'text-md uppercase font-extrabold',
     children: [
       {
         label: 'Link',
@@ -160,10 +159,10 @@ const items = ref([
     ]
   },
   {
-    label: 'Parmigiano@Casa',
+    label: 'parmigiano@casa',
     icon: 'i-tdesign:cheese',
     to: '/parmigiano',
-    class: 'text-lg px-4',
+    class: 'text-md uppercase font-extrabold',
     children: [
       {
         label: 'Link',

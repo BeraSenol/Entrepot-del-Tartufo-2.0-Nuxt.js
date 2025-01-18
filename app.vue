@@ -1,6 +1,6 @@
 <template>
   <UApp>
-    <Navigation/>
+    <NavigationLogo class="fixed"/>
     <NuxtPage/>
   </UApp>
 </template>
