@@ -1,13 +1,15 @@
 <template>
   <div>
     <TruffleSeperator />
-    <UContainer class="flex flex-col md:flex-row">
+    <UContainer class="flex flex-col md:flex-row mb-2 md:mb-4 lg:mb-6 xl:mb-8">
       <div class="flex flex-col text-center basis-1/3 mb-8 lg:mb-0">
-        <h2 class="md:!text-xl lg:!text-2xl xl:!text-3xl">entrepot del tartufo</h2>
-        <p class="font-extralight mt-1.5 italic">italian food with a touch of truffle</p>
+        <h2 class="md:!text-xl lg:!text-2xl xl:!text-3xl">{{ $t('general.restaurant.name') }}</h2>
+        <p class="font-extralight mt-1.5 italic">{{ $t('general.restaurant.slogan') }}</p>
         <div class="my-2">
-          <UButton v-for="social in socials" :key="social.label" :icon="social.icon" :to="social.to"
+          <UTooltip v-for="social in socials" :text="social.label">
+            <UButton :key="social.label" :icon="social.icon" :to="social.to"
             class="text-white mx-0.5" variant="ghost" size="xl" target="_blank" />
+          </UTooltip>
         </div>
       </div>
       <div class="flex flex-col gap-y-1.5 text-center font-extralight basis-1/3 mb-8 md:mb-0">
@@ -27,13 +29,13 @@
       </div>
       <div class="flex flex-col text-center basis-1/3 mb-8 lg:mb-0">
         <h2 class="md:!text-xl lg:!text-2xl xl:!text-3xl">openingsuren</h2>
-        <div class="grid grid-cols-2 gap-x-10 gap-y-1.5 font-extralight tracking-wide mt-1.5">
-          <p class="text-right tracking-wide">Ma / Do / Vr</p>
+        <div class="grid grid-cols-2 gap-x-10 gap-y-1.5 font-extralight tracking-wide mt-1.5 capitalize">
+          <p class="text-right tracking-wide">{{ $t('general.date.lunch') }}</p>
           <p class="text-left">12h - 14h<br>18h - 22h</p>
-          <p class="text-right tracking-wide">Za / Zo</p>
+          <p class="text-right tracking-wide">{{ $t('general.date.weekend') }}</p>
           <p class="text-left">18h - 22h</p>
-          <p class="text-right tracking-wide">Di / Wo</p>
-          <p class="pl-0.5 text-left italic">Gesloten</p>
+          <p class="text-right tracking-wide">{{ $t('general.date.closed') }}</p>
+          <p class="pl-1 text-left italic">{{ $t('footer.closed') }}</p>
         </div>
       </div>
     </UContainer>
@@ -41,9 +43,5 @@
 </template>
 
 <script lang="ts" setup>
-const socials = ref([
-  { label: 'facebook', to: 'https://www.facebook.com/entrepotdeltartufo/', icon: 'i-uil:facebook' },
-  { label: 'instagram', to: 'https://www.instagram.com/entrepotdeltartufo/', icon: 'i-akar-icons:instagram-fill' },
-  { label: 'linked in', to: 'https://www.linkedin.com/company/entrepot-del-tartufo', icon: 'i-uil:linkedin' }
-])
+const socials = useSocials();
 </script>

@@ -1,9 +1,17 @@
 <template>
   <div class="relative">
-    <NuxtImg src="landing/1.jpg" alt="1" />
+    <NuxtImg :src="`landing/${image}.jpg`" :alt="image" />
     <UContainer class="flex flex-col justify-center items-start absolute inset-0">
-      <h1>{{ $t('index.title') }}</h1>
-      <h5>{{ $t('index.subtitle') }}.</h5>
+      <h1>{{ title }}</h1>
+      <h5>{{ subtitle }}.</h5>
     </UContainer>
   </div>
 </template>
+
+<script lang="ts" setup>
+defineProps({
+  image: { type: String, required: true },
+  title: { type: String, required: true },
+  subtitle: { type: String, required: true },
+})
+</script>

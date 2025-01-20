@@ -1,12 +1,12 @@
 <template>
     <div class="flex flex-col justify-center items-center">
-        <LandingImage />
+        <LandingImage :image="'1'" :title="$t('index.title')" :subtitle="$t('index.subtitle')" />
         <HomeWelcome />
-        <HomeLunchImage/>
+        <HomeLunchImage />
         <HomeLunchDescription />
-        <HomeParmigianoImage/>
+        <HomeParmigianoImage />
         <HomeWelcome />
-        <TruffleSeperator/>
-        <HomeGetInTouch/>
+        <TruffleSeperator />
+        <HomeGetInTouch />
     </div>
 </template>

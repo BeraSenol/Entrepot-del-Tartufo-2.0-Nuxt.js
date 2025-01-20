@@ -10,7 +10,7 @@
 @import "tailwindcss/theme" theme(reference);
 
 h1 {
-  @apply text-2xl md:text-4xl lg:text-5xl xl:text-7xl leading-6 md:leading-9 lg:leading-11 xl:leading-16 font-bold uppercase;
+  @apply text-2xl md:text-4xl lg:text-5xl xl:text-7xl leading-7 md:leading-9 lg:leading-11 xl:leading-16 font-bold uppercase;
 }
 
 h2 {

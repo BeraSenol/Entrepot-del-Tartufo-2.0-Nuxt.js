@@ -13,9 +13,9 @@
 
     <template #body>
       <div class="flex flex-col gap-y-1 lg:gap-y-1.5 xl:gap-y-2">
-        <UButton v-for="route in routes" :key="route.label" :to="route.to"
-          class="text-white font-extrabold uppercase" variant="link" @click="close()">
-          <p>{{ route.label }}</p>
+        <UButton v-for="page in pages" :key="page.label" :to="page.to" class="text-white font-extrabold uppercase"
+          variant="link" @click="close()">
+          <p>{{ page.label }}</p>
         </UButton>
       </div>
     </template>
@@ -34,17 +34,6 @@
 const isOpen = ref(false);
 const close = () => isOpen.value = !isOpen.value;
 
-const routes = ref([
-  { label: 'home', to: '/' },
-  { label: 'menu', to: '/menu' },
-  { label: 'info', to: '/info' },
-  { label: 'contact', to: '/contact' },
-  { label: 'parmigiano@casa', to: '/parmigiano' }
-])
-
-const socials = ref([
-  { label: 'facebook', to: 'https://www.facebook.com/entrepotdeltartufo/', icon: 'i-uil:facebook' },
-  { label: 'instagram', to: 'https://www.instagram.com/entrepotdeltartufo/', icon: 'i-akar-icons:instagram-fill' },
-  { label: 'linked in', to: 'https://www.linkedin.com/company/entrepot-del-tartufo', icon: 'i-uil:linkedin' }
-])
+const pages = usePages();
+const socials = useSocials();
 </script>
