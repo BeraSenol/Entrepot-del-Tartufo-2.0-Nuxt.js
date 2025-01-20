@@ -3,7 +3,7 @@
         <LandingImage />
         <HomeWelcome />
         <HomeLunchImage/>
-        <HomeWelcome />
+        <HomeLunchDescription />
         <HomeParmigianoImage/>
         <HomeWelcome />
         <TruffleSeperator/>

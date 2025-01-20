@@ -13,15 +13,17 @@
 
     <template #body>
       <div class="flex flex-col">
-        <UButton v-for="route in routes" :key="route.label" :label="route.label" :to="route.to"
-          class="text-white text-base md:text-lg xl:text-xl font-extrabold uppercase" variant="link" @click="close()" />
+        <UButton v-for="route in routes" :key="route.label" :to="route.to"
+          class="text-white font-extrabold uppercase py-0.5" variant="link" @click="close()">
+          <p>{{ route.label }}</p>
+        </UButton>
       </div>
     </template>
 
     <template #footer>
       <div class="flex justify-center w-full">
         <UButton v-for="social in socials" :key="social.label" :icon="social.icon" :to="social.to"
-          class="text-white mx-1" variant="ghost" size="xl" target="_blank" />
+          class="text-white mx-1" variant="ghost" size="xl" target="_blank"></UButton>
       </div>
     </template>
 
