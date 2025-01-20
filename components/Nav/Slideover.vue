@@ -12,9 +12,9 @@
     </template>
 
     <template #body>
-      <div class="flex flex-col">
+      <div class="flex flex-col gap-y-1 lg:gap-y-1.5 xl:gap-y-2">
         <UButton v-for="route in routes" :key="route.label" :to="route.to"
-          class="text-white font-extrabold uppercase py-0.5" variant="link" @click="close()">
+          class="text-white font-extrabold uppercase" variant="link" @click="close()">
           <p>{{ route.label }}</p>
         </UButton>
       </div>

@@ -2,6 +2,7 @@
   <UApp>
     <NavHeader />
     <NuxtPage />
+    <NavFooter />
   </UApp>
 </template>
 
@@ -17,26 +18,26 @@ h2 {
 }
 
 h3 {
-  @apply text-lg md:text-2xl lg:text-3xl xl:text-5xl leading-5 md:leading-6 lg:leading-7 xl:leading-8 font-medium uppercase;
+  @apply text-lg md:text-2xl lg:text-3xl xl:text-5xl leading-5 md:leading-6 lg:leading-7 xl:leading-8 font-bold uppercase;
 }
 
 h4 {
-  @apply text-sm md:text-lg lg:text-2xl xl:text-3xl leading-4 md:leading-5 lg:leading-6 xl:leading-8 font-light xl:font-extralight capitalize italic;
+  @apply text-sm md:text-lg lg:text-2xl xl:text-3xl leading-4 md:leading-5 lg:leading-6 xl:leading-8 font-bold uppercase;
 }
 
 h5 {
-  @apply text-sm md:text-lg lg:text-2xl xl:text-3xl leading-4 md:leading-5 lg:leading-6 xl:leading-8 tracking-wider font-extralight xl:font-thin capitalize italic;
+  @apply text-sm md:text-lg lg:text-2xl xl:text-3xl leading-4 md:leading-5 lg:leading-6 xl:leading-8 tracking-wider font-light xl:font-extralight capitalize italic;
 }
 
 h6 {
-  @apply text-xs md:text-base lg:text-lg xl:text-2xl leading-2 md:leading-3 lg:leading-4 xl:leading-5 tracking-widest font-extralight xl:font-thin capitalize;
-}
-
-p {
-  @apply text-base lg:text-lg xl:text-xl leading-7 lg:leading-8 xl:leading-10;
+  @apply text-xs md:text-base lg:text-lg xl:text-2xl leading-2 md:leading-3 lg:leading-4 xl:leading-5 tracking-widest font-light xl:font-extralight capitalize italic;
 }
 
 .u-button {
-  @apply text-white m-1 px-5 py-1.5 lg:px-6 xl:px-7 capitalize;
+  @apply text-white font-medium m-1 py-2.5 px-4 md:mx-5 lg:px-6 xl:px-7 capitalize;
+}
+
+p {
+  @apply text-base lg:text-lg xl:text-xl;
 }
 </style>
