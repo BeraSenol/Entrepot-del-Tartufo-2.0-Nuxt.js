@@ -5,5 +5,8 @@
         <HomeLunchImage/>
         <HomeWelcome />
         <HomeParmigianoImage/>
+        <HomeWelcome />
+        <TruffleSeperator/>
+        <HomeGetInTouch/>
     </div>
 </template>
