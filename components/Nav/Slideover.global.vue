@@ -1,11 +1,11 @@
 <template>
   <USlideover v-model:open="isOpen" class="max-h-screen" close-icon="i-lucide-arrow-right">
-    <UButton class="py-1 md:scale-110 lg:scale-125 xl:scale-150" icon="i-heroicons-outline:menu" variant="soft" />
+    <UButton class="py-1.5 scale-110" icon="i-heroicons-outline:menu" variant="soft" size="xl"/>
 
     <template #header>
       <div class="flex justify-between py-0">
-        <UButton class="text-white text-xl pr-0 md:text-2xl font-extrabold uppercase tracking-wide" label="entrepot del
-        tartufo" to="/" variant="link" />
+        <UButton class="text-white text-xl pr-0 md:text-2xl font-extrabold uppercase tracking-wide" to="/"
+          variant="link">{{ $t('general.restaurant_name') }} </UButton>
         <UButton class="text-white px-1 md:scale-110 lg:scale-125" icon="i-material-symbols:close-rounded"
           variant="link" @click="close()" />
       </div>
@@ -22,8 +22,10 @@
 
     <template #footer>
       <div class="flex justify-center w-full">
-        <UButton v-for="social in socials" :key="social.label" :icon="social.icon" :to="social.to"
-          class="text-white mx-1" variant="ghost" size="xl" target="_blank"></UButton>
+        <UTooltip v-for="social in socials" :text="social.label">
+          <UButton :key="social.label" :icon="social.icon" :to="social.to" class="text-white xl:scale-125 xl:mx-1.5"
+            variant="ghost" size="xl" target="_blank" />
+        </UTooltip>
       </div>
     </template>
 

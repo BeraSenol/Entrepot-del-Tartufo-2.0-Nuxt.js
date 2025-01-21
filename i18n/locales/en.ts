@@ -1,55 +1,58 @@
-import Seperator from "~/components/Truffle/Seperator.vue"
-import Contact from "~/pages/contact.vue"
-
-export default defineI18nLocale(async locale => {
+export default defineI18nLocale(locale => {
   return {
     general: {
-      restaurant: {
-        name: 'entrepot del tartufo',
-        slogan: 'italian food with a touch of truffle'
-      },
-      hour: {
-        lunch: '10h - 12h',
-        parmigiano: '18h - 20h'
-      },
-      date: {
-        lunch: 'mo / th / fr',
-        dinner: 'mo / th / fr / sa / su',
-        weekend: 'sa / su',
-        closed: 'tu / we'
-      },
-      seperator: {
-        or: 'or'
-      }
+      closed_date: 'tu / we',
+      dinner_date: 'mo / th / fr / sa / su',
+      dinner_hour: '18h - 22h',
+      lunch_date: 'mo / th / fr',
+      lunch_hour: '12h - 14h',
+      parmigiano_hour: '18h - 20h',
+      restaurant_name: 'entrepot del tartufo',
+      restaurant_slogan: 'italian food with a touch of truffle',
+      seperator_or: 'or',
+      weekend_date: 'sa / su',
+    },
+    pages: {
+      contact: 'contact',
+      home: 'home',
+      info: 'info',
+      menu: 'menu',
+      parmigiano: 'parmigiano@casa',
     },
     index: {
-      title: 'welcome in restaurant entrepot del tartufo',
-      subtitle: 'italian food with a touch of truffle',
-      welcome: 'Welcome to our website! Restaurant Entrepot del Tartufo is located in an old warehouse in the cozy heavenly street in Hasselt. In a casual atmosphere you can enjoy the purity of Italian cuisine with a touch of truffle in combination with excellent wines.',
+      contact_button: 'the contact form',
+      dinner_button: 'see dinner menu',
+      email_button: 'sending an email',
+      further_questions: 'Do you have any further questions? do not hesitate to contact us via',
+      get_in_touch: 'get in touch!',
+      image_title_1: `lunch {'@'} entrepot`,
+      image_title_2: `parmigiano {'@'} casa`,
       info_button: 'more infomation',
       reservation_button: 'make a reservation',
-      dinner_button: 'see dinner menu',
-      lunch: {
-        description: 'lunch experience',
-        two_courses: 'two courses',
-        three_courses: 'three courses',
-        two_courses_price: '€ 30',
-        three_courses_price: '€ 40',
-        disclaimer: 'lunch is available daily vary and depends on the Market offer'
-      },
-      contact: {
-        get_in_touch: 'get in touch!',
-        further_questions: 'Do you have any further questions? Do not hesitate to contact us by',
-        contact_button: 'the contact form',
-        email_button: 'sending an email'
-      },
-      subject: {
-        title_1: `lunch {'@'} entrepot`,
-        title_2: `parmigiano {'@'} casa`
-      }
+      subtitle: 'italian food with a touch of truffle',
+      title: 'welcome in restaurant entrepot del tartufo',
+      welcome: 'welcome to our website! restaurant entrepot del tartufo is located in an old warehouse in the cozy hemelrijk street in hasselt. in a casual atmosphere you can enjoy the purity of italian cuisine with a touch of truffle in combined along excellent wines.',
+    },
+    lunch: {
+      description: 'lunch experience',
+      disclaimer: 'lunch menu varies weekly and is dependend on the local market',
+      three_courses_price: '€ 40',
+      three_courses: 'three courses',
+      two_courses_price: '€ 30',
+      two_courses: 'two courses',
+    },
+    tooltip: {
+      choose_en: 'English',
+      choose_lang: 'Choose Language',
+      choose_nl: 'Dutch',
+      footer_address: 'Find Us On Google Maps!',
+      footer_email: 'Send us an Email!',
+      footer_phone: 'Call Us!',
+      footer_vat: 'VAT Number',
     },
     footer: {
-      closed: 'closed'
+      closed: 'closed',
+      opening_hour: 'opening hours',
     }
   }
 })
