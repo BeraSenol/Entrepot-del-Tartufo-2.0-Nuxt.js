@@ -1,7 +1,7 @@
 <template>
   <UPopover v-model:open="isOpen">
     <UTooltip :text="$t('tooltip.choose_lang')">
-      <UButton class="uppercase" :label="locale" variant="soft" @click="isOpen = !isOpen" size="xl"/>
+      <UButton class="px-2.75 uppercase" :label="locale" variant="soft" @click="isOpen = !isOpen" size="xl"/>
     </UTooltip>
     <template #content>
       <div class="flex flex-col p-1.5 md:p-2 space-y-2 md:space-y-2.5">

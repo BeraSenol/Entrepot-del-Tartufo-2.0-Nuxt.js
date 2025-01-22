@@ -1,11 +1,11 @@
 <template>
   <USlideover v-model:open="isOpen" class="max-h-screen" close-icon="i-lucide-arrow-right">
-    <UButton class="py-1.5 scale-110" icon="i-heroicons-outline:menu" variant="soft" size="xl"/>
+    <UButton class="p-2 scale-110" icon="i-heroicons-outline:menu" variant="soft" size="xl" />
 
     <template #header>
       <div class="flex justify-between py-0">
         <UButton class="text-white text-xl pr-0 md:text-2xl font-extrabold uppercase tracking-wide" to="/"
-          variant="link">{{ $t('general.restaurant_name') }} </UButton>
+          variant="link">{{ $t('general.restaurant_name') }}</UButton>
         <UButton class="text-white px-1 md:scale-110 lg:scale-125" icon="i-material-symbols:close-rounded"
           variant="link" @click="close()" />
       </div>
@@ -15,7 +15,7 @@
       <div class="flex flex-col gap-y-1 lg:gap-y-1.5 xl:gap-y-2">
         <UButton v-for="page in pages" :key="page.label" :to="page.to" class="text-white font-extrabold uppercase"
           variant="link" @click="close()">
-          <p>{{ page.label }}</p>
+          <h4>{{ page.label }}</h4>
         </UButton>
       </div>
     </template>

@@ -16,31 +16,31 @@ const { locale } = useI18n();
 @import "tailwindcss/theme" theme(reference);
 
 h1 {
-  @apply text-2xl md:text-4xl lg:text-5xl xl:text-7xl;
+  @apply text-2xl md:text-5xl lg:text-6xl xl:text-7xl;
 }
 
 h2 {
-  @apply text-xl md:text-3xl lg:text-4xl xl:text-6xl;
+  @apply text-xl md:text-4xl lg:text-5xl xl:text-6xl;
 }
 
 h3 {
-  @apply text-lg md:text-2xl lg:text-3xl xl:text-5xl;
+  @apply text-lg md:text-3xl lg:text-4xl xl:text-5xl;
 }
 
 h4 {
-  @apply text-base md:text-xl lg:text-2xl xl:text-4xl;
+  @apply text-base md:text-2xl lg:text-3xl xl:text-4xl;
 }
 
 h5 {
-  @apply text-sm md:text-lg lg:text-xl xl:text-3xl;
+  @apply text-sm md:text-xl lg:text-2xl xl:text-3xl;
 }
 
 h6 {
-  @apply text-xs md:text-base lg:text-lg xl:text-2xl;
+  @apply text-xs md:text-lg lg:text-xl xl:text-2xl;
 }
 
 p {
-  @apply text-base lg:text-lg xl:text-xl;
+  @apply text-base md:text-lg lg:text-xl;
 }
 
 .u-button {

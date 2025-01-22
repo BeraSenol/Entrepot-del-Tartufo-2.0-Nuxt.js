@@ -1,5 +1,5 @@
 <template>
-  <UContainer class="flex flex-col items-center justify-center w-full u-my-xl">
+  <UContainer class="flex flex-col items-center justify-center w-full u-my-xl u-py-xl">
     <h2 class="font-bold uppercase">{{ $t('lunch.description') }}</h2>
     <div class="grid grid-cols-2 w-full max-w-xs lg:max-w-xl xl:max-w-xl gap-0 font-light italic u-my-xl">
       <p class="capitalize">{{ $t('lunch.two_courses') }}</p>

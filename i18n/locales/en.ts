@@ -40,9 +40,9 @@ export default defineI18nLocale(locale => {
     lunch: {
       description: 'lunch experience',
       disclaimer: 'lunch menu varies weekly and is dependend on the local market',
-      three_courses_price: '40',
+      three_courses_price: '€40',
       three_courses: 'three courses',
-      two_courses_price: '30',
+      two_courses_price: '€30',
       two_courses: 'two courses',
     },
     tooltip: {
