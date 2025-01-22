@@ -38,7 +38,7 @@
         </UTooltip>
       </div>
       <div class="flex flex-col text-center basis-1/3 mb-8 md:mb-0">
-        <h2 class="md:!text-xl lg:!text-2xl xl:!text-3xl">{{ $t('footer.opening_hour') }}</h2>
+        <h2 class="md:!text-xl lg:!text-2xl xl:!text-3xl font-bold uppercase">{{ $t('footer.opening_hour') }}</h2>
         <div class="grid grid-cols-2 gap-x-10 gap-y-1.5 font-extralight tracking-wider mt-1.5 capitalize">
           <p class="text-right">{{ $t('general.lunch_date') }}</p>
           <p class="text-left italic">{{ $t('general.lunch_hour') }}<br>{{ $t('general.dinner_hour') }}</p>

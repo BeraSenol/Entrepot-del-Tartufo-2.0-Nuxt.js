@@ -1,7 +1,13 @@
+<script lang="ts" setup>
+import * as locales from '@nuxt/ui/locale'
+
+const { locale } = useI18n();
+</script>
+
 <template>
-  <UApp>
+  <UApp :locale="locales[locale]">
     <NavHeader />
-    <NuxtPage />
+    <NuxtPage keepalive />
     <NavFooter />
   </UApp>
 </template>
@@ -9,35 +15,28 @@
 <style>
 @import "tailwindcss/theme" theme(reference);
 
-h1,
-h2,
-h3 {
-  @apply font-bold uppercase;
-}
-
-h5,
-h6 {
-  @apply font-light xl:font-extralight capitalize italic;
-}
-
 h1 {
-  @apply text-2xl md:text-4xl lg:text-5xl xl:text-7xl leading-7 md:leading-9 lg:leading-11 xl:leading-16;
+  @apply text-2xl md:text-4xl lg:text-5xl xl:text-7xl;
 }
 
 h2 {
-  @apply text-xl md:text-3xl lg:text-4xl xl:text-6xl leading-6 md:leading-7 lg:leading-9 xl:leading-10;
+  @apply text-xl md:text-3xl lg:text-4xl xl:text-6xl;
 }
 
 h3 {
-  @apply text-lg md:text-2xl lg:text-3xl xl:text-5xl leading-5 md:leading-6 lg:leading-7 xl:leading-8;
+  @apply text-lg md:text-2xl lg:text-3xl xl:text-5xl;
+}
+
+h4 {
+  @apply text-base md:text-xl lg:text-2xl xl:text-4xl;
 }
 
 h5 {
-  @apply text-sm md:text-lg lg:text-2xl xl:text-3xl leading-4 md:leading-5 lg:leading-6 xl:leading-8 tracking-wider;
+  @apply text-sm md:text-lg lg:text-xl xl:text-3xl;
 }
 
 h6 {
-  @apply text-xs md:text-base lg:text-lg xl:text-2xl leading-2 md:leading-3 lg:leading-4 xl:leading-5 tracking-widest;
+  @apply text-xs md:text-base lg:text-lg xl:text-2xl;
 }
 
 p {

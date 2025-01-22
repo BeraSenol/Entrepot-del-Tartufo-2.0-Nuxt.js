@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-col justify-center items-center">
-        <SubjectImage :image="'1'" :title="$t('index.title')" :subtitle="$t('index.subtitle')" />
+        <SubjectImage :image="'1'" :title="$t('index.image_title_0')" :subtitle="$t('index.image_subtitle_0')" />
         <HomeWelcome />
         <SubjectImage :image="'2'" :title="$t('index.image_title_1')" :subtitle="$t('general.lunch_hour')"
             :days="$t('general.lunch_date')" />

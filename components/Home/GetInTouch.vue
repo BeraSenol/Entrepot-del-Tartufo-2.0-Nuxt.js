@@ -1,6 +1,6 @@
 <template>
   <UContainer class="flex flex-col items-center w-full u-my-xl">
-    <h2>{{ $t('index.get_in_touch') }}</h2>
+    <h2 class="font-bold uppercase">{{ $t('index.get_in_touch') }}</h2>
     <p class="text-center capitalize u-my-xl">{{ $t('index.further_questions') }}</p>
     <div class="flex flex-col">
       <UButton class="u-button" variant="soft" size="xl">

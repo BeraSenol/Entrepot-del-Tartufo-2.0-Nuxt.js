@@ -1,6 +1,6 @@
 <template>
   <UContainer class="flex flex-col items-center justify-center w-full u-my-xl">
-    <h2>{{ $t('lunch.description') }}</h2>
+    <h2 class="font-bold uppercase">{{ $t('lunch.description') }}</h2>
     <div class="grid grid-cols-2 w-full max-w-xs lg:max-w-xl xl:max-w-xl gap-0 font-light italic u-my-xl">
       <p class="capitalize">{{ $t('lunch.two_courses') }}</p>
       <p class="text-right">{{ $t('lunch.two_courses_price') }}</p>
