@@ -15,7 +15,7 @@
       <div class="flex flex-col gap-y-1 lg:gap-y-1.5 xl:gap-y-2">
         <UButton v-for="page in pages" :key="page.label" :to="page.to" class="text-white font-extrabold uppercase"
           variant="link" @click="close()">
-          <h4>{{ page.label }}</h4>
+          <h6>{{ page.label }}</h6>
         </UButton>
       </div>
     </template>

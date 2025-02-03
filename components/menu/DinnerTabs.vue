@@ -12,7 +12,7 @@
       {{ $t('general.dinner_hour') }}
     </p>
     <UContainer class="w-full flex">
-      <UTabs :items="menus" class="w-full flex-col" :orientation="isWindowBellowMd ? 'vertical' : 'horizontal'">
+      <UTabs :items="menus" class="w-full u-my-lg flex-col" :orientation="isWindowBellowMd ? 'vertical' : 'horizontal'">
         <template #default="{ item }">
           <UContainer>
             <p class="uppercase">{{ item.label }}</p>
